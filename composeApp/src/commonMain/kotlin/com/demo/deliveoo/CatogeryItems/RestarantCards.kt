@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
@@ -48,7 +47,8 @@ fun RestaurantCard(
     Card(
         modifier = Modifier
             .width(260.dp)
-            .wrapContentHeight()
+            .height(240.dp)
+            .padding(start = 5.dp)
             .clickable { onRestaurantClick(restaurantName) },
         shape = RoundedCornerShape(6.dp),
         elevation = 2.dp
@@ -57,7 +57,7 @@ fun RestaurantCard(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(200.dp)
+                    .height(130.dp)
             ) {
                 Box(
                     modifier = Modifier
@@ -153,7 +153,7 @@ fun RestaurantCard(
                 Text(
                     text = deliveryFee,
                     color = Color.Gray,
-                    fontSize = 11.sp
+                    fontSize = 12.sp
                 )
             }
         }

@@ -33,7 +33,6 @@ public fun RestaurantSection(
     onRestaurantClick: (String) -> Unit
 ) {
     Column(
-        modifier = Modifier.padding(4.dp)
     ) {
         if (isFeatured) {
             // Featured section header style
@@ -43,7 +42,7 @@ public fun RestaurantSection(
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.padding(
                     top = 16.dp,
-                    start = 3.dp
+                    start = 5.dp
                 )
             )
             Text(
@@ -53,7 +52,7 @@ public fun RestaurantSection(
                 modifier = Modifier.padding(
                     top = 5.dp,
                     bottom = 10.dp,
-                    start = 3.dp
+                    start = 5.dp
                 )
             )
         } else {

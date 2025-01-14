@@ -49,7 +49,7 @@ fun HomeScreen(onRestaurantClick: (String) -> Unit
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color.White)
+            .background(color = Color(0xFFF8F8F8))
     ) {
         // Top Bar with Location and Profile
         TopBar()
@@ -80,14 +80,14 @@ private fun TopBar() {
             Text(
                 text = "Now",
                 color = Color.Gray,
-                fontSize = 15.sp
+                fontSize = 14.sp
             )
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
                     text = "E139QF",
-                    fontSize = 16.sp,
+                    fontSize = 15.sp,
                     fontWeight = FontWeight.Bold
                 )
                 Icon(
@@ -155,7 +155,7 @@ private fun SearchBar() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(12.dp)
+            .padding(10.dp)
             .background(Color(0xFFE8FAF7), RoundedCornerShape(8.dp))
             .padding(12.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -182,7 +182,7 @@ private fun CategoriesRow(
         selectedTabIndex = selectedIndex,
         backgroundColor = Color.White,
         contentColor = Color(0xFF00C2B3),
-        edgePadding = 16.dp,
+        edgePadding = 6.dp,
         indicator = { tabPositions ->
             TabRowDefaults.Indicator(
                 modifier = Modifier.tabIndicatorOffset(tabPositions[selectedIndex]),
@@ -198,7 +198,8 @@ private fun CategoriesRow(
                 text = {
                     Text(
                         text = category.title,
-                        color = if (selectedIndex == index) Color(0xFF00C2B3) else Color.Gray
+                        fontSize = 12.sp,
+                        color = if (selectedIndex == index) Color.Black else Color.Gray
                     )
                 }
             )
